@@ -9,8 +9,8 @@ PokeDIO é um contrato inteligente baseado no Ethereum para a criação e batalh
 
 1. Clone o repositório:
     ```bash
-    git clone https://github.com/seu-usuario/pokedio.git
-    cd pokedio
+    git clone https://github.com/mario-evangelista/nft-pokemon-blockchain.git
+    cd nft-pokemon-blockchain
     ```
 
 2. Instale as dependências:
