@@ -110,7 +110,17 @@ Ao criar um novo Pokémon, o estado de evolução é inicializado como None.
 
 Esta função permite que o proprietário do Pokémon evolua seu Pokémon quando ele atinge o nível 10.
 
-Você pode adicionar lógica para alterar o nome ou a imagem do Pokémon após a evolução, se desejar.
+3.1. Lógica de Evolução
+
+Na função evolvePokemon, após verificar se o Pokémon pode evoluir, adicionamos lógica para alterar o nome e a imagem do Pokémon:
+
+Comparação de Nomes: Foi utilizado keccak256 para comparar strings (nomes dos Pokémons) de forma segura. Isso é necessário porque Solidity não possui um operador de comparação de strings nativo.
+
+Alteração de Nome e Imagem: Dependendo do nome do Pokémon antes da evolução, altera-se o nome e a URL da imagem para os novos valores correspondentes.
+
+3.2. Exemplos de Evolução
+
+Incluímos evoluções para dois Pokémons: Pikachu evoluindo para Raichu e Charmander evoluindo para Charmeleon. 
 
 4. Função battle
 
