@@ -94,6 +94,28 @@ A função então gera um novo ID para o Pokémon com base no tamanho atual do a
 
 Finalmente, a função usa _safeMint herdado do ERC721 para cunhar um novo token NFT com o ID gerado e atribuí-lo ao endereço fornecido.
 
+## Explicação das Modificações propostas:
+
+1. Enum e Struct
+
+Enum EvolutionState: Define dois estados possíveis para a evolução dos Pokémons: None (não evoluído) e Evolved (evoluído).
+
+Struct Pokemon: Agora inclui o campo evolutionState para rastrear o estado de evolução de cada Pokémon.
+
+2. Função createNewPokemon
+
+Ao criar um novo Pokémon, o estado de evolução é inicializado como None.
+
+3. Função evolvePokemon
+
+Esta função permite que o proprietário do Pokémon evolua seu Pokémon quando ele atinge o nível 10.
+
+Você pode adicionar lógica para alterar o nome ou a imagem do Pokémon após a evolução, se desejar.
+
+4. Função battle
+
+A função de batalha agora verifica se o Pokémon atacante pode evoluir após a batalha e chama evolvePokemon se as condições forem atendidas.
+
 ## Contribuição
 
 1. Faça um fork do projeto
