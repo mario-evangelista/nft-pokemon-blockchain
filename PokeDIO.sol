@@ -51,10 +51,15 @@ contract PokeDIO is ERC721 {
         // Atualiza o estado de evolução
         pokemon.evolutionState = EvolutionState.Evolved;
 
-        // Aqui você pode definir a nova forma do Pokémon, se necessário
-        // Exemplo de mudança de nome ou imagem após a evolução
-        // pokemon.name = "Novo Nome"; // Defina o novo nome
-        // pokemon.img = "Nova Imagem"; // Defina a nova imagem
+        // Exemplo de mudança de nome e imagem após a evolução
+        if (keccak256(abi.encodePacked(pokemon.name)) == keccak256(abi.encodePacked("Pikachu"))) {
+            pokemon.name = "Raichu"; // Nome após evolução
+            pokemon.img = "url_da_imagem_de_raichu"; // URL da nova imagem
+        } else if (keccak256(abi.encodePacked(pokemon.name)) == keccak256(abi.encodePacked("Charmander"))) {
+            pokemon.name = "Charmeleon"; // Nome após evolução
+            pokemon.img = "url_da_imagem_de_charmeleon"; // URL da nova imagem
+        }
+        // Adicione mais condições conforme necessário para outros Pokémons
     }
 
     function battle(
